@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>danas</title>
+<style type="text/css">
+html, body, #page-one, #page-two, #page-three, #page-four {
+    height: 100%;
+} 
+
+#page-one, #page-two, #page-three, #page-four {
+    padding-top: 2cm;
+}
+    
+#mainNav {
+    background-color: #000000;
+    color: #000000;
+    line-height: 4em;
+    padding: 0;
+    position: fixed;
+    top: 0em;
+    width: 100%;
+}
+    
+a, a:link, a:visited, a:hover, a:active {
+    color: hwb(0 91% 9%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+}
+    
+a:hover {
+    color: #000000;
+}
+
+h2 {
+    font-size: 3em;
+    padding-top: 1em;
+    text-align: center;
+    font-family: sans-serif;
+    color: #006400;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 2.5em;
+    color: #006400;
+}
+
+#page-one {
+    background-color: #fff;
+}
+
+#page-two {
+    background-color: #fff;
+}
+
+#page-three {
+    background-color: #fff;
+}
+
+#page-four {
+    background-color: #fff;
+}
+</style>   
+</head>
+<body>
+<nav id="mainNav">Перейти на:
+    <a href="#page-one">Главная</a>
+    <a href="#page-two">О нас</a>
+    <a href="#page-three">Новости</a>
+    <a href="#page-four">Контакты</a>
+    <a href="#page-5">donate</a>
+</nav>
+
+<div id="page-one">
+    <img src="img/1.png"  height="300px" width="400px" >
+    <h2>Главная</h2>
+    <p>Информация</p>
+    <img src="img/0.jpg"  height="300px" width="400px" >
+</div>
+<div id="page-two">
+    <h2>О нас</h2>
+    <p>Информация</p>
+    <img src="img/0.jpg"  height="300px" width="400px" >
+</div>
+<div id="page-three">
+    <h2>Новости</h2>
+    <p>Информация</p>
+    <img src="img/0.jpg"  height="300px" width="400px" >
+</div>
+<div id="page-four">
+    <h2>Контакты</h2>
+    <p>Информация</p>
+    <img src="img/0.jpg"  height="300px" width="400px" >
+</div>   
+<div id="page-5">
+    <h2>donate</h2>
+    <p>downndhfhsdfh</p>
+    <p><a href="https://www.python.org/downloads/">Download Python</a></p> 
+    <img src="img/3.jpg"  height="300px" width="400px" >
+    
+    <img src="img/1.png"  height="300px" width="400px" >
+</div>  
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('a[href*=#]').bind('click', function(e) {
+            e.preventDefault();
+            
+            var target = $(this).attr("href");
+            
+            $('html, body').stop().animate({scrollTop: $(target).offset().top}, 500, function() {
+                location.hash = target;
+            });
+            
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
